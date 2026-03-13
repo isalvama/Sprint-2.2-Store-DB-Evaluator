@@ -2,18 +2,18 @@
 
 
 ## 📈 Resumen
-✅ 2 correctas de 5 queries
+✅ 2 correctas de 4 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.42 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -43,13 +43,9 @@
 ```
 
 ## ❌ Query 3: Error
-- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHOW COLUMNS FROM producto' at line 2
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESCRIBE producto' at line 2
 
 
 ## ❌ Query 4: Error
-- **Descripción**: 1054 (42S22): Unknown column 'productos' in 'field list'
-
-
-## ❌ Query 5: Error
 - **Descripción**: 'NoneType' object is not iterable
 
