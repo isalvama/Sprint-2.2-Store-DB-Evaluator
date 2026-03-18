@@ -2,18 +2,18 @@
 
 
 ## 📈 Resumen
-✅ 24 correctas de 39 queries
+✅ 25 correctas de 62 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -35,21 +35,20 @@
 -9.00 | Portátil Ideapd 320 | 444.00 | 2.00
 -10.00 | Impresora HP Deskjet 3720 | 59.99 | 3.00
 -11.00 | Impresora HP Laserjet Pro M26nw | 180.00 | 3.00
-+COLUMN_NAME
-+codigo
-+codigo_fabricante
-+nombre
-+precio
++Field | Type | Null | Key | Default | Extra
++codigo | int unsigned | NO | PRI | NULL | auto_increment
++nombre | varchar(100) | NO |  | NULL | 
++precio | double | NO |  | NULL | 
++codigo_fabricante | int unsigned | NO | MUL | NULL | 
 ```
 
-⏱ Tiempo: 0.77 ms
-✅ Se usó índice(s) en la consulta: table_id,table_id_2,collation_id, PRIMARY,character_set_id, PRIMARY, PRIMARY,catalog_id, PRIMARY,schema_id
+## ❌ Query 3: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHOW COLUMNS FROM tienda.producto' at line 2
 
----
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -58,46 +57,29 @@
 ```diff
 --- 
 +++ 
-@@ -1,12 +1,12 @@
+@@ -1,4 +1,4 @@
 -nom del producte | euros | dòlars
--Disco duro SATA3 1TB | 86.99 | 95.69
 +nombre | euros | dòlars
-+Disco duro SATA3 1TB | 86.99 | 96.00
+ Disco duro SATA3 1TB | 86.99 | 95.69
  Memoria RAM DDR4 8GB | 120.00 | 132.00
--Disco SSD 1 TB | 150.99 | 166.09
--GeForce GTX 1050Ti | 185.00 | 203.50
--GeForce GTX 1080 Xtreme | 755.00 | 830.50
--Monitor 24 LED Full HD | 202.00 | 222.20
--Monitor 27 LED Full HD | 245.99 | 270.59
--Portátil Yoga 520 | 559.00 | 614.90
--Portátil Ideapd 320 | 444.00 | 488.40
--Impresora HP Deskjet 3720 | 59.99 | 65.99
-+Disco SSD 1 TB | 150.99 | 166.00
-+GeForce GTX 1050Ti | 185.00 | 204.00
-+GeForce GTX 1080 Xtreme | 755.00 | 831.00
-+Monitor 24 LED Full HD | 202.00 | 222.00
-+Monitor 27 LED Full HD | 245.99 | 271.00
-+Portátil Yoga 520 | 559.00 | 615.00
-+Portátil Ideapd 320 | 444.00 | 488.00
-+Impresora HP Deskjet 3720 | 59.99 | 66.00
- Impresora HP Laserjet Pro M26nw | 180.00 | 198.00
+ Disco SSD 1 TB | 150.99 | 166.09
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -111,22 +93,12 @@
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 10: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nombre | precio truncado
-+nombre | precio
- Disco duro SATA3 1TB | 86.00
- Memoria RAM DDR4 8GB | 120.00
- Disco SSD 1 TB | 150.00
-```
+## ✅ Query 10: Correcto
 
 ⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
@@ -135,42 +107,42 @@
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 15: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -189,7 +161,7 @@
 -5.00 | Seagate
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -199,14 +171,14 @@
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -222,7 +194,7 @@
 +Lenovo
 ```
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -242,28 +214,28 @@
 ## ✅ Query 24: Correcto
 
 ⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 25: Correcto
 
-⏱ Tiempo: 0.31 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.41 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 26: Correcto
 
-⏱ Tiempo: 0.31 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 27: Correcto
 
-⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
@@ -280,36 +252,36 @@
 -Impresora HP Laserjet Pro M26nw | 180.00 | Hewlett-Packard
 ```
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.44 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 29: Correcto
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.44 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 30: Correcto
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.43 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 31: Correcto
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 32: Correcto
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.44 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
@@ -332,8 +304,8 @@
  7.00 | Gigabyte
 ```
 
-⏱ Tiempo: 0.31 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
@@ -349,14 +321,14 @@
  Lenovo | Portátil Ideapd 320
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.47 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
 ## ✅ Query 35: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.47 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -374,8 +346,8 @@
 +Portátil Ideapd 320
 ```
 
-⏱ Tiempo: 0.31 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+⏱ Tiempo: 0.40 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
@@ -400,5 +372,97 @@
 
 
 ## ❌ Query 39: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 40: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 41: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 42: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 43: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 44: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 45: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 46: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 47: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 48: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 49: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 50: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 51: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 52: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 53: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 54: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 55: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 56: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 57: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 58: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 59: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 60: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 61: Error
+- **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
+
+
+## ❌ Query 62: Error
 - **Descripción**: 2014 (HY000): Commands out of sync; you can't run this command now
 
