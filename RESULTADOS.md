@@ -2,16 +2,18 @@
 
 
 ## 📈 Resumen
-✅ 16 correctas de 39 queries
+✅ 17 correctas de 39 queries
 
-## ❌ Query 1: Error
-- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--- 1. Llista el nom de tots els productes que hi ha en la taula producto.
-SELEC' at line 1
+## ✅ Query 1: Correcto
 
+⏱ Tiempo: 0.41 ms
+🔍 No se usó ningún índice en esta consulta.
+
+---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.44 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -35,13 +37,13 @@ SELEC' at line 1
 -11.00 | Impresora HP Laserjet Pro M26nw | 180.00 | 3.00
 +COLUMN_NAME
 +codigo
++codigo_fabricante
 +nombre
 +precio
-+codigo_fabricante
 ```
 
 ⏱ Tiempo: 0.80 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,schema_id, PRIMARY,character_set_id, PRIMARY,catalog_id, table_id,table_id_2,collation_id, PRIMARY
+✅ Se usó índice(s) en la consulta: PRIMARY,schema_id, table_id,table_id_2,collation_id, PRIMARY,character_set_id, PRIMARY, PRIMARY,catalog_id
 
 ---
 
@@ -81,35 +83,35 @@ SELEC' at line 1
  Impresora HP Laserjet Pro M26nw | 180.00 | 198.00
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -133,42 +135,42 @@ SELEC' at line 1
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 15: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -187,7 +189,7 @@ SELEC' at line 1
 -5.00 | Seagate
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -197,14 +199,14 @@ SELEC' at line 1
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -220,7 +222,7 @@ SELEC' at line 1
 +Lenovo
 ```
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -237,8 +239,8 @@ SELEC' at line 1
  Disco SSD 1 TB | 150.99 | Samsung
 ```
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -270,8 +272,8 @@ SELEC' at line 1
 -Disco duro SATA3 1TB | 86.99 | Seagate
 ```
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -287,8 +289,8 @@ SELEC' at line 1
  3.00 | Disco SSD 1 TB | 4.00 | Samsung
 ```
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.34 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -302,8 +304,8 @@ SELEC' at line 1
  Impresora HP Deskjet 3720 | 59.99 | Hewlett-Packard
 ```
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.34 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -317,22 +319,22 @@ SELEC' at line 1
  GeForce GTX 1080 Xtreme | 755.00 | Crucial
 ```
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 26: Correcto
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 27: Correcto
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -350,8 +352,8 @@ SELEC' at line 1
 -Impresora HP Laserjet Pro M26nw | 180.00 | Hewlett-Packard
 ```
 
-⏱ Tiempo: 0.37 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -367,8 +369,8 @@ SELEC' at line 1
  Monitor 27 LED Full HD | 245.99 | Asus
 ```
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -383,8 +385,8 @@ SELEC' at line 1
  GeForce GTX 1050Ti | 185.00 | Gigabyte
 ```
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -399,8 +401,8 @@ SELEC' at line 1
  Impresora HP Laserjet Pro M26nw | 180.00 | Hewlett-Packard
 ```
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -416,8 +418,8 @@ SELEC' at line 1
  Portátil Ideapd 320 | 444.00 | Lenovo
 ```
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -441,7 +443,7 @@ SELEC' at line 1
 ```
 
 ⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -457,7 +459,7 @@ SELEC' at line 1
  Lenovo | Portátil Ideapd 320
 ```
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -473,7 +475,7 @@ SELEC' at line 1
  Xiaomi
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -491,8 +493,8 @@ SELEC' at line 1
 +Portátil Ideapd 320
 ```
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
