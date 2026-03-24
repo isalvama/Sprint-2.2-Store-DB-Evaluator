@@ -66,7 +66,7 @@ SELECT nombre FROM tienda.producto WHERE codigo_fabricante = 2;
 SELECT p.nombre, p.precio, f.nombre AS 'nombre del fabricante' FROM tienda.producto p JOIN tienda.fabricante f ON p.codigo_fabricante = f.codigo;
 
 -- 22. Llista tots els productes amb nom, preu i nom del fabricant (nombre del fabricante) ordenats alfabèticament.
-SELECT p.nombre, p.precio, f.nombre AS 'nombre del fabricante' FROM tienda.producto p JOIN tienda.fabricante f ON p.codigo_fabricante = f.codigo ORDER BY p.nombre DESC;
+SELECT p.nombre, p.precio, f.nombre AS 'nombre del fabricante' FROM tienda.producto p JOIN tienda.fabricante f ON p.codigo_fabricante = f.codigo ORDER BY p.nombre;
 
 -- 23. Retorna una llista amb el codi del producte, nom del producte, codi del fabricant (codigo fabricante) i nom del fabricant (nombre fabricante), de tots els productes de la base de dades.
 SELECT p.codigo, p.nombre, p.codigo_fabricante AS 'codigo fabricante', f.nombre AS 'nombre fabricante' FROM tienda.producto p JOIN tienda.fabricante f ON p.codigo_fabricante = f.codigo;
@@ -117,7 +117,7 @@ SELECT DISTINCT p.codigo, p.nombre, p.precio, p.codigo_fabricante FROM tienda.pr
 SELECT p.nombre FROM tienda.producto p, tienda.fabricante f WHERE p.codigo_fabricante = f.codigo AND f.nombre = 'Lenovo' ORDER BY p.precio DESC LIMIT 1;
 
 -- 39. Llista el nom del producte més barat del fabricant Hewlett-Packard.
-SELECT p.nombre FROM tienda.producto p, tienda.fabricante f WHERE p.codigo_fabricante = f.codigo AND f.nombre = 'Hewlett-Packard' ORDER BY p.precio DESC LIMIT 1;
+SELECT p.nombre FROM tienda.producto p, tienda.fabricante f WHERE p.codigo_fabricante = f.codigo AND f.nombre = 'Hewlett-Packard' ORDER BY p.precio LIMIT 1;
 
 -- 40. Retorna tots els productes de la base de dades que tenen un preu major o igual al producte més car del fabricant Lenovo.
 SELECT DISTINCT p.codigo, p.nombre, p.precio, p.codigo_fabricante FROM tienda.producto p WHERE p.precio >= (SELECT MAX(p2.precio) FROM tienda.producto p2 JOIN tienda.fabricante f on f.codigo = p2.codigo_fabricante WHERE f.nombre = 'Lenovo');
